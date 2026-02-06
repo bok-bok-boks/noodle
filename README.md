@@ -1,2 +1,2 @@
 # noodle
-A Google frontend for older browsers.
+A lightweight Google frontend.
