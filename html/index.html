@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Homepage</title>
+    <style>
+        h1,
+        h3 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+        }
+
+        #searchBox {
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        #searchInput {
+            width: 300px;
+        }
+
+        #searchButton {
+            border-style: outset;
+            background-color: lightgray;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>noodle</h1>
+    <h3>A lightweight search engine with absolutely no JS.</h3>
+    <div id="searchBox" align="center">
+        <form action="/search" method="post">
+            <h3>Search</h3>
+            <input type="search" name="query" id="searchInput" placeholder="Enter a search term">
+            <input type="submit" value="Search" id="searchButton">
+        </form>
+        <form action="/imgSearch" method="post">
+            <h3>Search Images</h3>
+            <input type="search" name="query" id="searchInput" placeholder="Enter a search term">
+            <input type="submit" value="Search" id="searchButton">
+        </form>
+    </div>
+</body>
+
+</html>
