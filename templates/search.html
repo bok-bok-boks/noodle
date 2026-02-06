@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>{{ title }} - noodle</title>
+
+    <style>
+        a,
+        ul,
+        h2,
+        h3 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Results</h2>
+    <hr>
+    {% if results %}
+    {% for result in results %}
+    <h3><a href="{{ result['href'] }}">{{ result['title'] }}</a><br>
+        <h5>{{ result['href'] }}</h5>
+    </h3>
+    {% endfor %}
+    {% else %}
+    <p>No results found.</p>
+    {% endif %}
+</body>
+
+</html>
