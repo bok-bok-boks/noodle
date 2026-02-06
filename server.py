@@ -20,18 +20,12 @@ def imgSearchResults(query):
 
 @app.route('/search', methods=["GET", "POST"])
 def search():
-    if request.method == "GET":
-        return send_file('html/search_failure.html')
-    
     q = request.form.get("query")
 
     return render_template('search.html', title=q, results=searchResults(q))
     
 @app.route('/imgSearch', methods=["GET", "POST"])
-def searchImg():
-    if request.method == "GET":
-        return send_file('html/search_failure.html')
-    
+def searchImg():  
     q = request.form.get("query")
 
     return render_template('searchImg.html', title=q, results=imgSearchResults(q))
